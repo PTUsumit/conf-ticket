@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Ticket Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <p>Secure your spot at next year's biggest coding conference.</p>
+
+    <form id="ticketForm">
+      <label>Upload Avatar</label>
+      <input type="file" id="avatar" accept="image/png, image/jpeg">
+
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+
+      <label>Email Address</label>
+      <input type="email" id="email" required placeholder="example@email.com">
+
+      <label>GitHub Username</label>
+      <input type="text" id="github" required placeholder="@yourusername">
+
+      <button type="submit">Generate My Ticket</button>
+    </form>
+  </div>
+
+  <div id="ticketContainer" class="hidden">
+    <h2>Congrats, <span id="ticketName"></span>! Your ticket is ready.</h2>
+    <p>We've emailed your ticket to <span id="ticketEmail"></span> and will send updates in the run-up to the event.</p>
+
+    <div class="ticket">
+      <h3>Coding Conf</h3>
+      <p>Jan 31, 2025 / Austin, TX</p>
+      <img id="ticketAvatar" src="" alt="Avatar">
+      <h4 id="ticketFullName"></h4>
+      <p id="ticketGithub"></p>
+    </div>
+
+    <button id="downloadBtn">Download Ticket</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
